@@ -3,7 +3,7 @@ body {
   background: #fff0f6;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
 }
 
 h1 {
@@ -13,28 +13,43 @@ h1 {
 }
 
 .ciclo {
-  border-left: 6px solid #d63384;
-  margin-bottom: 30px;
-  padding-left: 15px;
+  margin-bottom: 40px;
 }
 
 .ciclo h2 {
   color: #b1005c;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .ramo {
+  background: #ffe3ec;
+  border: 2px solid #f8b2ce;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 10px 0;
   display: flex;
   align-items: center;
-  margin: 8px 0;
+  transition: background 0.3s;
+}
+
+.ramo:hover {
+  background: #ffd6e8;
 }
 
 .ramo input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.3);
   accent-color: #d63384;
-  transform: scale(1.2);
-  margin-right: 10px;
+}
+
+.ramo label {
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .ramo label.locked {
   color: #aaa;
   text-decoration: line-through;
+  cursor: not-allowed;
 }
