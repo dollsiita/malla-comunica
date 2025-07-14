@@ -1,54 +1,40 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5;
+  background: #fff0f6;
   color: #333;
+  margin: 0;
   padding: 20px;
 }
 
 h1 {
-  color: #d63384;
   text-align: center;
+  color: #d63384;
   margin-bottom: 40px;
 }
 
 .ciclo {
-  margin-bottom: 40px;
   border-left: 6px solid #d63384;
-  padding-left: 16px;
+  margin-bottom: 30px;
+  padding-left: 15px;
 }
 
 .ciclo h2 {
-  color: #d63384;
-  margin-bottom: 10px;
+  color: #b1005c;
 }
 
-.curso {
-  display: inline-block;
-  background-color: #f8d7da;
-  border: 2px solid #d63384;
-  padding: 10px 15px;
-  margin: 6px;
-  border-radius: 10px;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.3s ease;
-  font-weight: bold;
+.ramo {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
 }
 
-.curso:hover {
-  background-color: #f3b7c2;
+.ramo input[type="checkbox"] {
+  accent-color: #d63384;
+  transform: scale(1.2);
+  margin-right: 10px;
 }
 
-.curso.aprobado {
-  background-color: #c3e6cb;
-  border-color: #28a745;
-  color: #155724;
+.ramo label.locked {
+  color: #aaa;
+  text-decoration: line-through;
 }
-
-.curso.bloqueado {
-  background-color: #e2e3e5;
-  border-color: #adb5bd;
-  color: #6c757d;
-  cursor: not-allowed;
-}
-
