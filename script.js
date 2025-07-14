@@ -21,7 +21,6 @@ const cursos = [
       "Arte y Cultura"
     ]
   }
-  // Puedes seguir agregando los otros ciclos aquí...
 ];
 
 const estado = JSON.parse(localStorage.getItem("estadoMalla")) || {};
@@ -50,15 +49,16 @@ function crearMalla() {
       checkbox.id = nombre;
       checkbox.checked = !!estado[nombre];
       checkbox.disabled = requisitos.some(req => !estado[req]);
+
       checkbox.addEventListener("change", () => {
         estado[nombre] = checkbox.checked;
         localStorage.setItem("estadoMalla", JSON.stringify(estado));
-        crearMalla();
+        crearMalla(); // actualiza visualmente
       });
 
       const label = document.createElement("label");
-      label.textContent = nombre;
       label.setAttribute("for", nombre);
+      label.textContent = nombre;
       if (checkbox.disabled) label.classList.add("locked");
 
       divRamo.appendChild(checkbox);
